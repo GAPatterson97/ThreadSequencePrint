@@ -9,7 +9,7 @@ public class ThreadSequencePrint {
     private int count = 1;
     private int turn = 0;
 
-    private final Lock lock = new ReentrantLock();
+    private final Lock lock = new ReentrantLock(true);
     private final Condition[] conditions = new Condition[3];
 
     public ThreadSequencePrint() {
